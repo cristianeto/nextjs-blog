@@ -5,7 +5,7 @@ import utilStyles from '../styles/utils.module.scss';
 import Link from 'next/link';
 
 const name = 'Cristian Guaman';
-export const siteTitle = "Cristian's Blog Website";
+export const siteTitle = "Cristian's Blog";
 
 const layout = ({ children, home }) => {
   return (
