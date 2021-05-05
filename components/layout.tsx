@@ -7,7 +7,13 @@ import Link from 'next/link';
 const name = 'Cristian Guaman';
 export const siteTitle = "Cristian's Blog";
 
-const layout = ({ children, home }) => {
+const layout = ({
+  children,
+  home,
+}: {
+  children: React.ReactNode;
+  home?: boolean;
+}) => {
   return (
     <div className={styles.container}>
       <Head>
