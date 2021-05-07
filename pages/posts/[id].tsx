@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { GetStaticProps, GetStaticPaths } from 'next';
+import { useRouter } from 'next/router';
 
 import Layout from '../../components/layout';
 import { getAllPostIds, getPostData } from '../../lib/posts';
@@ -13,6 +14,11 @@ interface Blog {
 }
 
 const Post = ({ postData }: { postData: Blog }) => {
+  const router = useRouter();
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <Layout>
       <Head>
